@@ -4,7 +4,8 @@
 
 一个轻量级、现代化的 NAS 系统监控面板，提供实时系统状态、硬件监控、网络统计和进程管理功能。
 
-![NAS Monitor Panel](docs/screenshot.png)
+![NAS Monitor Panel](docs/panel_imges_01.png)
+![NAS Monitor Panel](docs/panel_imges_02.png)
 
 ## 功能特性
 
