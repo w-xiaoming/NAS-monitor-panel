@@ -1,0 +1,6 @@
+host: 0.0.0.0
+port: 8902
+title: NAS Monitor Panel
+refresh_interval: 5
+data_dir: /path/to/your/data
+ws_enabled: true

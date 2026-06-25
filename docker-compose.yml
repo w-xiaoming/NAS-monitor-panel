@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  nas-monitor:
+    build: .
+    container_name: nas-monitor
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8902}:8902"
+    volumes:
+      - ${DATA_DIR:-./data}:/app/data
+      - ${CONFIG_DIR:-./config}:/app/config
+    environment:
+      - TZ=${TZ:-Asia/Shanghai}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8902')"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
